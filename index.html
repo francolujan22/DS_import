@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- SEO Básico -->
+<meta name="description" content="DS Import - Vitrina mayorista y minorista de tecnología. Accesorios, gadgets y más. Envíos a toda Argentina.">
+<meta name="keywords" content="mayorista, tecnología, Buenos Aires, accesorios, gadgets, auriculares, celulares">
+<meta name="author" content="Franco Luján">
+
+<!-- Meta OG para redes sociales -->
+<meta property="og:title" content="DS Import | Catálogo de Tecnología" />
+<meta property="og:description" content="Explorá nuestra vitrina de productos tech. Mayoristas y minoristas." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://francolujan22.github.io/" />
+<meta property="og:image" content="https://francolujan22.github.io/images/og-image.png" />
+
+<!-- Script JS -->
+<script src="scripts/script.js" defer></script>
+
+<title>DSImport</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+
+      if (input === "Mayorista123" || input === "Minorista123") {
+        document.getElementById("login-overlay").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+      } else {
+        alert("Contraseña incorrecta. Intenta nuevamente.");
+      }
+    }
+
+    function toggleMenu() {
+      const dropdown = document.getElementById("menuDropdown");
+
+      if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+      } else {
+        dropdown.style.display = "block";
+      }
+    }
+
+    // Hacer que Enter funcione también
+    const inputField = document.getElementById("passwordInput");
+    inputField.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        checkPassword();
+      }
+    });
+
+    // También conectar la función al botón por seguridad
+    const loginButton = document.querySelector('button[onclick="checkPassword()"]');
+    if (loginButton) {
+      loginButton.addEventListener("click", checkPassword);
+    }
+
+    // Exponer funciones globales si se llaman desde atributos HTML
+    window.checkPassword = checkPassword;
+    window.toggleMenu = toggleMenu;
+  });
+</script>
+<body><div id="login-overlay">
+  <h2>DS Import</h2>
+  <input type="password" id="passwordInput" placeholder="Contraseña..." />
+  <button onclick="checkPassword()">Ingresar</button>
+  <br />
+  <a href="https://wa.me/5492267419517" target="_blank">
+    <button class="btn-wsp">WhatsApp</button>
+  </a>
+  <p>↑</p>
+  <p>Para adquirir Contraseña comunicarse por WhatsApp</p>
+</div>
+</div>
+  <div id="main-content" style="display: none;">
+    <header>
+      <div class="header-top">
+        <div class="logo"><h2>DS Import</h2></div>
+        <div class="menu">
+          <button class="hamburger" onclick="toggleMenu()">☰</button>
+          <div class="menu-dropdown" id="menuDropdown">
+            <a href="https://catalogo.duxsoftware.com.ar/ds"><button>Lista Productos 1</button></a>
+            <a href="https://catalogo.duxsoftware.com.ar/ds"><button>Lista Productos 2</button></a>
+          </div>
+        </div>
+        <div class="header-buttons">
+          <a href="https://catalogo.duxsoftware.com.ar/ds"><button>Lista Productos 1</button></a>
+          <a href="https://catalogo.duxsoftware.com.ar/ds"><button>Lista Productos 2</button></a>
+        </div>
+      </div>
+    </header>
+    <section class="product-container">
+      <div class="product-card">
+        <img src="image (4).bin" alt="Smartphone">
+        <div class="product-title">Templado Antiespia</div>
+      </div>
+      <div class="product-card">
+        <img src="image (1).bin" alt="Auriculares">
+        <div class="product-title">Auriculares Bluetooth</div>
+      </div>
+      <div class="product-card">
+        <img src="image.bin" alt="Aro de Luz">
+        <div class="product-title">Aro de Luz</div>
+      </div>
+      <div class="product-card">
+        <img src="image (3).bin" alt="Fundas Smartphone">
+        <div class="product-title">Fundas Smartphone</div>
+      </div>
+      <div class="product-card">
+        <img src="image (2).bin" alt="Auriculares Vincha">
+        <div class="product-title">Auriculares Vincha</div>
+      </div>
+      <div class="product-card">
+        <img src="image (5).bin" alt="Cabezal Auto USB">
+        <div class="product-title">Cabezal Auto USB</div>
+      </div>
+    </section>
+    <footer>
+      © 2025 DSImport - Todos los derechos reservados - Franco Luján
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
