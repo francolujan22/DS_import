@@ -33,15 +33,3 @@ Catálogo mayorista y minorista de productos tecnológicos. Este sitio fue desar
 ![DS Import Screenshot](images/og-image.png)
 
 ---
-
-## 🚀 Cómo ver el sitio en vivo
-
-Podés acceder al sitio público desde el siguiente enlace:
-
-🔗 [https://TUUSUARIO.github.io/dsimport](https://TUUSUARIO.github.io/dsimport)  
-(Reemplazá `TUUSUARIO` por tu usuario real de GitHub)
-
----
-
-## 📁 Estructura del proyecto
-
